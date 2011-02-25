@@ -7,6 +7,8 @@ license  'freebsd';
 
 build_requires 'Test::More';
 
+author_requires 'Module::Install::WriteAll';
+
 auto_install;
 
 WriteAll;
