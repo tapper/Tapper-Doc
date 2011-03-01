@@ -9,7 +9,7 @@ our $VERSION = '3.000001';
 
 =head1 NAME
 
-Tapper::Doc - Central documentation hub
+Tapper::Doc - Tapper - Central documentation hub
 
 =head1 ABOUT
 
