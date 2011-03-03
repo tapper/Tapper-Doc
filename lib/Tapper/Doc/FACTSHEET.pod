@@ -1,0 +1,144 @@
+=head1 TAPPER FACT SHEET
+
+
+=head1 Infrastructure for all aspects of testing
+
+=head2 Automation
+
+=over 4
+
+=item * Network boot
+
+=item * Self-setup driven by abstract specfile
+
+=item * Image-based or kickstart/autoyast based
+
+=item * Support for virtualized setups (Xen and KVM)
+
+=item * Inject packages and programs into hosts/guest
+
+=item * Control execution of test scripts in hosts/guests
+
+=item * Interdependent setup and sync of co-operating machines
+
+=item * Reboot handling
+
+=item * Timeout handling
+
+=item * Hardware reset
+
+=item * Console logging
+
+=back
+
+
+=head2 Scheduling
+
+=over 4
+
+=item * optimize machine utilization in pools of "not enough" machines
+for "too many use-cases"
+
+=item * Multiplex queues of freely definable use-cases (Xen, KVM,
+kernels, ad-hoc tests, benchmarks) with bandwidth constraints
+
+=item * Queues for use-cases with different priorities
+
+=item * Dynamically add, delete queues
+
+=item * host/queue binding for dedicated scheduling
+
+=item * Host management (add, delete, de/activate)
+
+=item * Feature driven host matching (memory, cores, vendor, host)
+
+=item * Pluggable core scheduling algorithm
+
+=item * Multi-host scenarios
+
+=item * Auto re-run 
+
+=back
+
+=head2 Web Application
+
+=over 4
+
+=item * frontend to 2 databases: testruns and reports
+
+=item * aiming at management and high-level test result evaluation
+
+=item * filters over time, testsuites, machines, success status
+
+=item * RSS feeds on such filters
+
+=item * overview lists and detailed zoom-in, GREEN/YELLOW/RED coloring
+
+=item * visualize groups of connected results (virtualized neighbor
+guests)
+
+=item * control start of testruns
+
+=back
+
+=head2 Result Evaluation
+
+=over 4
+
+=item * The programmable complement to the webgui
+
+=item * Allow querying whole test result database
+
+=item * No client side toolchain neccessary
+
+=item * Easy API sends back filled out templates
+
+=item * API allows SQL and XPath like queries in an abstract way
+
+=back
+
+
+=head2 Support for writing tests
+
+=over 4
+
+=item * Test results based on Test Anything Protocol (TAP)
+
+=item * TAP support available for 
+
+
+=back
+
+=head1 Use-cases
+
+=head2 Kernel testing (stress, function, reboot)
+
+=head2 Virtualization Testing (Xen, KVM)
+
+=head2 Test matrix of host/guest combinations
+
+=head2 Distribution testing
+
+=head2 Multi-machine scenarios
+
+=head2 Complex result evaluation
+
+
+
+=head1 Target audiences
+
+=head2 Classical end user (web front end)
+
+=head2 Developers (scriptable result evaluation)
+
+
+=head1 Technology
+
+=head2 Test Anything Protocol (TAP)
+
+=head2 Core system written in Perl (using CPAN)
+
+=head2 Language agnostic (e.g, Perl/Python/Shell test suites)
+
+=head2 Strong decoupling of webgui, testsuites, automation
+
