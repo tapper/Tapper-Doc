@@ -7,13 +7,15 @@
 
 =over 4
 
-=item * Network boot
+=item * Network boot (PXE + TFTP + NFS)
 
-=item * Self-setup driven by abstract specfile
+=item * Machine self-setup driven by abstract specfiles
 
-=item * Image-based or kickstart/autoyast based
+=item * Image-based or kickstart/autoyast based installation
 
-=item * Support for virtualized setups (Xen and KVM)
+=item * Lightweight status API to easily plug in foreign installers
+
+=item * Support for virtualization setups (Xen and KVM)
 
 =item * Inject packages and programs into hosts/guest
 
@@ -21,13 +23,14 @@
 
 =item * Interdependent setup and sync of co-operating machines
 
+=item * Complex timeout handling for complete test cycle, inclusive
+virtualizated guest
+
 =item * Reboot handling
 
-=item * Timeout handling
+=item * Console logging
 
 =item * Hardware reset
-
-=item * Console logging
 
 =back
 
@@ -36,50 +39,49 @@
 
 =over 4
 
-=item * optimize machine utilization in pools of "not enough" machines
-for "too many use-cases"
+=item * Optimize utilization of pools with "not enough" machines for
+"too many use-cases"
 
-=item * Multiplex queues of freely definable use-cases (Xen, KVM,
-kernels, ad-hoc tests, benchmarks) with bandwidth constraints
+=item * Multiplex queues of freely definable use-cases (e.g., Xen, KVM,
+baremetal kernels, ad-hoc tests, benchmarks) with different bandwidths
 
-=item * Queues for use-cases with different priorities
+=item * Pluggable core scheduling algorithm (default "Weighted Fair Queuing")
 
-=item * Dynamically add, delete queues
+=item * Feature driven host matching (by memory, cores, vendor, etc. or complex combinations)
 
-=item * host/queue binding for dedicated scheduling
+=item * Dynamic queue and host management (add, delete, de/activate)
 
-=item * Host management (add, delete, de/activate)
+=item * Host/queue binding for dedicated scheduling
 
-=item * Feature driven host matching (memory, cores, vendor, host)
-
-=item * Pluggable core scheduling algorithm
+=item * Auto re-queuing for continuous testing
 
 =item * Multi-host scenarios
 
-=item * Auto re-run 
-
 =back
+
 
 =head2 Web Application
 
 =over 4
 
-=item * frontend to 2 databases: testruns and reports
+=item * Frontend to 2 databases: testruns and reports
 
-=item * aiming at management and high-level test result evaluation
+=item * Providing a "management view" and high-level test result evaluation
 
-=item * filters over time, testsuites, machines, success status
+=item * Overview lists and detailed zoom-in, GREEN/YELLOW/RED coloring
+
+=item * Filters over time, testsuites, machines, success status
 
 =item * RSS feeds on such filters
 
-=item * overview lists and detailed zoom-in, GREEN/YELLOW/RED coloring
-
-=item * visualize groups of connected results (virtualized neighbor
+=item * Visualize groups of connected results (virtualized neighbour
 guests)
 
-=item * control start of testruns
+=item * Control start of testruns
 
 =back
+
+
 
 =head2 Result Evaluation
 
@@ -87,58 +89,89 @@ guests)
 
 =item * The programmable complement to the webgui
 
-=item * Allow querying whole test result database
+=item * Allow complex queries on the test result database
 
 =item * No client side toolchain neccessary
 
-=item * Easy API sends back filled out templates
+=item * Easy API to send and get back queries embedded in templates
 
 =item * API allows SQL and XPath like queries in an abstract way
 
 =back
 
 
+
+=head2 Testplan Support
+
+=over 4
+
+=item * Testplans combine many Tapper features into concise points of
+interest
+
+=item * Manage testplan hierarchy allowing specfile reuse for complex testplan matrix
+
+=item * Interoperation with TaskJuggler on dedicated QA tasks for
+automatic scheduling and reporting
+
+=item * Consequently a complete focused QA life cycle of planning,
+execution and reporting
+
+=back
+
+
+
 =head2 Support for writing tests
 
 =over 4
 
-=item * Test results based on Test Anything Protocol (TAP)
+=item * Format test results based on standard Test Anything Protocol (TAP)
 
-=item * TAP support available for 
+=item * Existing standard TAP toolchains available for about 20
+programming languages
 
+=item * Dedicated Tapper support for Shell, Perl, Python available
 
 =back
 
-=head1 Use-cases
-
-=head2 Kernel testing (stress, function, reboot)
-
-=head2 Virtualization Testing (Xen, KVM)
-
-=head2 Test matrix of host/guest combinations
-
-=head2 Distribution testing
-
-=head2 Multi-machine scenarios
-
-=head2 Complex result evaluation
 
 
+=head1 Many use-cases
 
-=head1 Target audiences
+=over 4
 
-=head2 Classical end user (web front end)
+=item * Kernel testing (stress, function, reboot)
 
-=head2 Developers (scriptable result evaluation)
+=item * Virtualization Testing (Xen, KVM)
+
+=item * Test matrix of host/guest combinations
+
+=item * Distribution testing (like OS or compilers)
+
+=item * Multi-machine scenarios
+
+=item * Complex result evaluation
+
+=back
+
 
 
 =head1 Technology
 
-=head2 Test Anything Protocol (TAP)
+=over 4
 
-=head2 Core system written in Perl (using CPAN)
+=item * Test Anything Protocol (TAP)
 
-=head2 Language agnostic (e.g, Perl/Python/Shell test suites)
+=item * Core system written in Perl and CPAN
 
-=head2 Strong decoupling of webgui, testsuites, automation
+=item * DB independent via OR mapper, developed on MySQL and SQLite
 
+=item * HTML/CSS, cautious Javascript
+
+=item * Language agnostic testing (e.g, Perl/Python/Shell test suites)
+
+=item * PXE, GRUB, TFTP, NFS boot automation
+
+=item * Strong decoupling of functional layers (webgui, testsuites, automation)
+to allow you amalgamate own infrastructures
+
+=back
