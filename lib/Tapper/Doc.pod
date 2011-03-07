@@ -1,12 +1,3 @@
-package Tapper::Doc;
-
-use warnings;
-use strict;
-
-our $VERSION = '3.000001';
-
-1; # End of Tapper::Doc
-
 =head1 NAME
 
 Tapper::Doc - Tapper - Central documentation hub
@@ -14,7 +5,8 @@ Tapper::Doc - Tapper - Central documentation hub
 =head1 ABOUT
 
 This module is a documentation hub for all kinds of documentation
-about Tapper.
+about C<Tapper> - a B<Modular Test Infrastructure, inclusive Operating
+System and Virtualization support>.
 
 =head1 AVAILABLE DOCUMENTATION
 
@@ -23,11 +15,31 @@ about Tapper.
 =item * L<Tapper::Doc::Start::StepByStep|Tapper::Doc::Start::StepByStep>
 
 Installation guide to setup a complete infrastructure with Web
-frontend, client lib middle layer and automation layer.
+frontend, reports receiver, client libs and automation layer.
 
+=item * L<Tapper::Doc::FACTSHEET|Tapper::Doc::FACTSHEET>
 
+Very high level feature overview.
 
 =back
+
+=head1 GENERAL TAPPER SUPPORT
+
+=head2 IRC
+
+Via IRC you can contact us in channel
+
+ #tapper
+
+on
+
+  irc.freenode.net
+
+
+=head2 Mailing List
+
+There is a mailing list L<tapper@amd64.org|http://www.amd64.org/mailman/listinfo/tapper/>.
+
 
 =head1 AUTHOR
 
@@ -40,35 +52,6 @@ rt.cpan.org>, or through the web interface at
 L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Tapper-Doc>.  I will
 be notified, and then you'll automatically be notified of progress on
 your bug as I make changes.
-
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
-    perldoc Tapper::Doc
-
-
-You can also look for information at:
-
-=over 4
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Tapper-Doc>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Tapper-Doc>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Tapper-Doc>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/Tapper-Doc>
-
-=back
 
 =head1 COPYRIGHT & LICENSE
 
