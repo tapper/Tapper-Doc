@@ -17,7 +17,7 @@
 
 =item * Support for virtualization setups (Xen and KVM)
 
-=item * Inject packages and programs into hosts/guest
+=item * Inject packages, programs, files into hosts/guests
 
 =item * Control execution of test scripts in hosts/guests
 

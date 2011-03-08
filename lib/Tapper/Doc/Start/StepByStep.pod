@@ -2,10 +2,20 @@
 
 Tapper::Doc::Start::StepByStep - Step-by-step instructions how to set up a Tapper infrastructure
 
+=head1 About
+
+C<Tapper> is a B<Modular test infrastructure, inclusive Operating
+System and Virtualization support>. See
+L<Tapper::Doc::FACTSHEET|Tapper::Doc::FACTSHEET> for a feature
+overview.
+
 =head1 Intro
 
-In this example setup guide we will set up a central master host,
-named
+In this setup guide we will set up a central master host running the
+testrun and reports databases, the web frontend and the automation
+layer based on network boot, tftp and nfs.
+
+The central host is named
 
 =over 4
 
@@ -13,7 +23,7 @@ named
 
 =back
 
-with 2 slaves
+and we use 2 slave machines named
 
 =over 4
 
@@ -26,8 +36,8 @@ with 2 slaves
 We use symbolic variables for these machines:
 
  $TAPPER_SERVER = 'plutonium'
- $TESTMACHINE1   = 'johnconnor'
- $TESTMACHINE2   = 'sarahconnor'
+ $TESTMACHINE1  = 'johnconnor'
+ $TESTMACHINE2  = 'sarahconnor'
 
 =head1 Install base OS
 
