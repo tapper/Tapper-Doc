@@ -6,7 +6,7 @@ Tapper::Doc::Start::StepByStep - Step-by-step instructions how to set up a Tappe
 
 C<Tapper> is a B<Modular test infrastructure, inclusive Operating
 System and Virtualization support>. See
-L<Tapper::Doc::FACTSHEET|Tapper::Doc::FACTSHEET> for a feature
+L<Tapper::Doc::FactSheet|Tapper::Doc::FactSheet> for a feature
 overview.
 
 =head1 Intro

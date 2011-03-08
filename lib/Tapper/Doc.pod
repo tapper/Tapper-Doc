@@ -17,7 +17,7 @@ System and Virtualization support>.
 Installation guide to setup a complete infrastructure with Web
 frontend, reports receiver, client libs and automation layer.
 
-=item * L<Tapper::Doc::FACTSHEET|Tapper::Doc::FACTSHEET>
+=item * L<Tapper::Doc::FactSheet|Tapper::Doc::FactSheet>
 
 Very high level feature overview.
 
