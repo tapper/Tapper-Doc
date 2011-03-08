@@ -78,7 +78,7 @@ This will give you those files:
 
 =head2 Config
 
-Create an Tapper config in C</etc/tapper.cfg>. Copy an example
+Create a Tapper config in C</etc/tapper.cfg>. Copy an example
 config from C</tmp/tapper-example-configs/etc/tapper.cfg> and change
 it to fit your needs.
 
