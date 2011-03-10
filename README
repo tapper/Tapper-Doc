@@ -1,45 +1,33 @@
 Tapper-Doc
+==========
 
-This is a documentation hub for all kinds of documentation about Tapper.
-
-INSTALLATION
-
-Although it's merely transporting docs you can install this this
-module with the following commands:
-
-	perl Makefile.PL
-	make
-	make test
-	make install
+Central documentation hub for Tapper
 
 
-AVAILABLE DOCUMENTATION
+About Tapper 
+============
 
-After installing, you can find documentation for this module with the
-perldoc command.
+Tapper is an infrastructure for all aspects of testing 
+inclusive Operating Systems and Virtualization.
 
-    perldoc Tapper::Doc
+Tapper contains
 
-SUPPORT
+ - Automation
+ - Machine Scheduling
+ - Command line utils
+ - Web Frontend application
+ - Support for writing tests
+ - Powerful result evaluation API
+ - Testplan support with TaskJuggler
+ - Many use-cases from tracking test results to
+   benchmarking to full OS testing including virtualization
 
-You can look for information at:
+More information about Tapper:
 
-    RT, CPAN's request tracker
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Tapper-Doc
+ - https://github.com/amd/Tapper-Doc/
+ - https://search.cpan.org/~amd/Tapper-Doc/
 
-    AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/Tapper-Doc
+Other Tapper subprojects:
 
-    CPAN Ratings
-        http://cpanratings.perl.org/d/Tapper-Doc
-
-    Search CPAN
-        http://search.cpan.org/dist/Tapper-Doc
-
-
-COPYRIGHT AND LICENCE
-
-Copyright (C) 2011 AMD OSRC Tapper Team
-
-This program is released under the following license: freebsd
-
+ - https://github.com/amd
+ - https://search.cpan.org/~amd
