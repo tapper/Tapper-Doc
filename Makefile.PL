@@ -14,5 +14,8 @@ author_requires 'Module::Install::WriteAll';
 
 auto_install;
 
+repository 'git://github.com/amd/Tapper-Doc.git';
+bugtracker 'http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Tapper-Doc';
+
 WriteAll;
 
