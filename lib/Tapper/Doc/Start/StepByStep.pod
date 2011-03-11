@@ -4,10 +4,10 @@ Tapper::Doc::Start::StepByStep - Step-by-step instructions how to set up a Tappe
 
 =head1 About
 
-C<Tapper> is a B<Modular test infrastructure, inclusive Operating
+B<Tapper> is a B<modular test infrastructure, inclusive Operating
 System and Virtualization support>. See
-L<Tapper::Doc::FactSheet|Tapper::Doc::FactSheet> for a feature
-overview.
+L<Tapper::Doc::FactSheet|http://search.cpan.org/~amd/Tapper-Doc/lib/Tapper/Doc/FactSheet.pod>
+for a feature overview.
 
 =head1 Intro
 
