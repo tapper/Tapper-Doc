@@ -1,9 +1,9 @@
-=head1 TAPPER FACT SHEET
+=head1 Tapper Fact Sheet
 
 
-=head1 Infrastructure for all aspects of testing
+=head2 Infrastructure for all aspects of testing
 
-=head2 Automation
+=head3 Automation
 
 =over 4
 
@@ -35,7 +35,7 @@ virtualizated guest
 =back
 
 
-=head2 Scheduling
+=head3 Scheduling
 
 =over 4
 
@@ -60,7 +60,7 @@ baremetal kernels, ad-hoc tests, benchmarks) with different bandwidths
 =back
 
 
-=head2 Web Application
+=head3 Web Application
 
 =over 4
 
@@ -83,11 +83,11 @@ guests)
 
 
 
-=head2 Result Evaluation
+=head3 Result Evaluation
 
 =over 4
 
-=item * The programmable complement to the webgui
+=item * Programmable complement to the web frontend
 
 =item * Allow complex queries on the test result database
 
@@ -101,7 +101,7 @@ guests)
 
 
 
-=head2 Testplan Support
+=head3 Testplan Support
 
 =over 4
 
@@ -120,7 +120,7 @@ execution and reporting
 
 
 
-=head2 Support for writing tests
+=head3 Support for writing tests
 
 =over 4
 
@@ -135,7 +135,7 @@ programming languages
 
 
 
-=head1 Many use-cases
+=head2 Many use-cases
 
 =over 4
 
@@ -155,7 +155,7 @@ programming languages
 
 
 
-=head1 Technology
+=head2 Technology
 
 =over 4
 
@@ -175,3 +175,21 @@ programming languages
 to allow you amalgamate own infrastructures
 
 =back
+
+=head2 Correlation to autotest.kernel.org
+
+The main focus of C<autotest.kernel.org> project is on testing the
+Linux kernel. It provides a broad coverage of kernel functionality
+testing and wrappers of many existing test suites.
+
+C<Tapper> provides many complex scenarios, like virtualization
+(Xen/KVM), distribution testing (RHEL, SLES, Debian), SimNow testing
+and benchmarking. C<Tapper> can schedule them all multiplexed with
+according bandwidths over large or small machine pools.
+
+The C<autotest.kernel.org> client can be used in a C<Tapper>
+infrastructure via a thin wrapper that utilizes the TAP export we
+provided to the C<autotest> project.
+
+C<Tapper> then complements it with Testplan support, a result database
+and a homogeneous result evaluation API.
