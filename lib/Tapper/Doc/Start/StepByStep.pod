@@ -546,6 +546,6 @@ Start the Tapper master controller:
 
 You can now start your first fully automatic Tapper test. 
 
- tapper-testrun new --macroprecon /tmp/tapper-example-configs/utils/kernel_boot_example_precondition.yml --requested_host johnconnor
+ tapper-testrun new --macroprecond /tmp/tapper-example-configs/utils/kernel_boot_example_precondition.yml --requested_host johnconnor
 
 Congratulation, you are now an Tapper user.
