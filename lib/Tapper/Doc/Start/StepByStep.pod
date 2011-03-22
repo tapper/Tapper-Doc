@@ -48,16 +48,12 @@ prepared this manual based on C<Debian Squeeze>.
 
 =head1 Get example starter packages
 
-=head3 B<TODO: PREPARE THESE PACKAGE FILES>
-
 We provide some example files for first start.
 Download the package and unpack it in C</tmp>:
 
   cd /tmp
-  wget http://www.amd64.org/tapper/first-start/tapper-example-configs.tgz
-  wget http://www.amd64.org/tapper/first-start/tapper-example-images.tgz
-  tar xzf tapper-example-configs.tgz
-  tar xzf tapper-example-images.tgz
+  wget http://amd64.org/pub/tapper/tapper-starterkit.tgz
+  tar xzf tapper-starterkit.tgz
 
 This will give you those files:
 
@@ -70,9 +66,7 @@ This will give you those files:
  /tmp/tapper-example-configs/utils/opt-tapper-package.sh
  /tmp/tapper-example-configs/utils/kernel_boot_example_precondition.yml
 
- /tmp/tapper-example-images/netboot/bzImage
- /tmp/tapper-example-images/guest/debian_base.tgz
- /tmp/tapper-example-images/nfsroot/debian_nfs_root.tgz
+ /tmp/tapper-example-images/tftpboot/bzImage
 
 =head1 Prepare basic work environment
 
@@ -84,8 +78,9 @@ it to fit your needs.
 
 =head2 Prepare central workdir
 
-Create sub directories that appear in the Tapper config. You don't
-need to understand them now. Just create the subdir hierarchy:
+The central workdir that is later exported via NFS.
+
+Create sub directories that appear in the Tapper config.
 
  mkdir -p /data/tapper/live/metareports/                     # meta-reports
  mkdir -p /data/tapper/live/output/                          # intermediate output
@@ -103,8 +98,9 @@ need to understand them now. Just create the subdir hierarchy:
 Create an NFS root that is able to boot over network. It will later
 run the Installer on the test machines:
 
-The manual L<prepare-netboot-image.pod|prepare-netboot-image.pod>
-tells you how to configure such an image.
+The manual
+L<Tapper::Doc::Start::PrepareNFSroot|Tapper::Doc::Start::PrepareNFSroot>
+tells you how to prepare such an image.
 
 Copy the content of the OS subdirectory into the central workdir:
 
@@ -194,12 +190,16 @@ Now let's create them. First start creating a chroot, e.g. by using
 the debian image you got earlier:
 
  mkdir /opt/chroot
- tar -C /opt/chroot/ -xzf /tmp/tapper-example-images/guest/debian_base.tgz
+ tar -C /opt/chroot/ -xzf /tmp/tapper-example-images/guest/debian_base64.tgz
  chroot /opt/chroot
  mount -t proc proc /proc
 
+ 
 Install perl inside this chroot as described in chapter
 L<Install perl using perlbrew|/"Install perl using perlbrew">:
+
+B<You can skip this step if you take the already prepared baseimage as
+base for the opt-tapper package>.
 
  cpan App::perlbrew
  PERLBREW_ROOT=/opt/tapper/perl perlbrew init
@@ -210,7 +210,7 @@ L<Install perl using perlbrew|/"Install perl using perlbrew">:
    cpan[1]> o conf auto_commit 1
    cpan[2]> o conf urllist unshift ftp://ftp.fu-berlin.de/unix/languages/perl/
 
-Install the PRC and Installer packages:
+Now, however, install the PRC and Installer packages:
 
  cpan Tapper::PRC
  cpan Tapper::Installer
@@ -372,7 +372,7 @@ to be droppped or used differently.
 =head2 Setup Web Server
 
 The L<Tapper::Reports::Web|Tapper::Reports::Web> server is the best
-way to get the test results. Therefore, we recommend to install it
+way to view the test results. Therefore, we recommend to install it
 even though tests are possible without it.
 
 =over 4
@@ -404,7 +404,7 @@ even though tests are possible without it.
 
 As long as you don't plan interdependent (client-server) testruns,
 just one test machine would be enough. To demonstrate a few Tapper
-features, we still describe a setup of two test machines. Substitue
+features, we still describe a setup of two test machines. Substitute
 $TESTMACHINE1 and $TESTMACHINE2 with the names of your test maschines.
 
 =head2 Automatic reset
