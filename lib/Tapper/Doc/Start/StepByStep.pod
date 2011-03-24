@@ -4,10 +4,40 @@ Tapper::Doc::Start::StepByStep - Step-by-step instructions how to set up a Tappe
 
 =head1 About
 
-B<Tapper> is a B<modular test infrastructure, inclusive Operating
-System and Virtualization support>. See
+Tapper is a B<modular test infrastructure, inclusive Operating System
+and Virtualization support>. See
 L<Tapper::Doc::FactSheet|http://search.cpan.org/~amd/Tapper-Doc/lib/Tapper/Doc/FactSheet.pod>
 for a feature overview.
+
+=head1 "The Whole Mix in One Go" starter kit
+
+B<HALT!> Don't neccessarily read the whole tutorial!
+
+There is a starter kit with a frontend Makefile that takes care of
+nearly everything described in this step-by-step guide.
+
+It is targeting a Debian/Squeeze:
+
+=over 4
+
+=item * Download frontend makefile:
+
+ curl -L http://xrl.us/tapperstarterkit -o Makefile
+
+=item * Run installation:
+
+ make it so
+
+=back
+
+This will download subsequent files, install Debian packages, create
+intermediate chroots, pack images, install and setup /etc/init.d
+services, etc., etc.
+
+For understanding what it does you can now read the following chapters
+-- especially for setting up the automation you will need some manual
+DHCP config and console and hardware reset installation. But the rest
+is covered in the starter kit.
 
 =head1 Intro
 
