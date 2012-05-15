@@ -1,9 +1,8 @@
 package Tapper::Doc;
+# ABSTRACT: Tapper - Documentation hub
 
 use warnings;
 use strict;
-
-our $VERSION = '3.000010';
 
 1; # End of Tapper::Doc
 
