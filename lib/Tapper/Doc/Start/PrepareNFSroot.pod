@@ -1,6 +1,5 @@
-=head1 NAME
-
-Tapper::Doc::Start::PrepareNFSroot - Step-by-step instructions how to set up a Tapper::Installer image bootable from NFS
+# PODNAME: Tapper::Doc::Start::PrepareNFSroot
+# ABSTRACT: Step-by-step instructions how to set up a Tapper::Installer image bootable from NFS
 
 =head1 Intro
 

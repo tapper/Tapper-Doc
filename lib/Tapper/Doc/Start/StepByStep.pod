@@ -1,6 +1,5 @@
-=head1 NAME
-
-Tapper::Doc::Start::StepByStep - Step-by-step instructions how to set up a Tapper infrastructure
+# PODNAME: Tapper::Doc::Start::StepByStep
+# ABSTRACT: Step-by-step instructions how to set up a Tapper infrastructure
 
 =head1 About
 
