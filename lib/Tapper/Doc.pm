@@ -16,11 +16,6 @@ System and Virtualization support>.
 
 =over 4
 
-=item * L<Tapper::Doc::Start::StepByStep|Tapper::Doc::Start::StepByStep>
-
-Installation guide to setup a complete infrastructure with Web
-frontend, reports receiver, client libs and automation layer.
-
 =item * L<Tapper::Doc::FactSheet|Tapper::Doc::FactSheet>
 
 Very high level feature overview.
