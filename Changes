@@ -1,7 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
-        - big Dist::Zilla roundhouse kick
+        - drop deprecated stuff
+        - Дист::Зилла Roundhouse kick
 
 2011-04-07  Steffen Schwigon  <steffen.schwigon@amd.com>
 
