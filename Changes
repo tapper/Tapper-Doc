@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+        - dzil pluginbundle TAPPER
         - drop deprecated stuff
         - Дист::Зилла Roundhouse kick
 
